@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 240px);
+            grid-template-rows: repeat(2, 460px);
+            gap: 50px;
+            justify-items: end;
+            align-items: start;
+            justify-content: center;
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+
+        .card__tit {
+            font-size: 13px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #222222;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .card__img {
+            width: 261px;
+            height: 280px;
+            padding-bottom: 10px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .card__info {
+            width: 261px;
+            font-size: 14px;
+            color: #9f9f9f;
+            text-align: justify;
+            padding-bottom: 10px;
+        }
+
+        .card__price {
+            padding-left: 10px;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #f16d7f;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container"></div>
+    <template id="news__template">
+        <div class="card">
+            <img class="card__img" src="" alt="">
+            <div class="card__tit"></div>
+            <div class="card__info"></div>
+            <div class="card__price">
+            </div>
+        </div>
+    </template>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
