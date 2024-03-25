@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__left center ">
+            <img class="padding-right" src="./img/Group 2.png" alt="logo">
+            <a class="find" href="#"><img src="./img/Forma 1.svg" alt="logo"></a>
+        </div>
+        <div class="header__right center">
+            <a href="#"><img src="./img/Button copy.svg" alt="menu">
+            </a>
+        </div>
+    </header>
+    <div class="top-content">
+        <img class="top-content __img" src="./img/Layer_57-removebg-preview 1.svg" alt="photo">
+
+        <div class="top-content__heading">THE BRAND <br><span class="heading_italics">OF LUXERIOUS</span><br>
+            <span class="heading_pink">FASHION</span>
+        </div>
+    </div>
+    <div class="sales-content center">
+        <div class="sale-content__card">
+            <img class="card__img" src="img/woman.png" alt="photo">
+            <p>NEW ARRIVALS <br><span class="heading_pink ">FOR KIDS</span></p>
+        </div>
+        <div class="sale-content__card"><img class="card__img" src="img/man.png" alt="photo">
+            <p>30% OFF <br> <span class="heading_pink ">FOR WOMEN</span></p>
+        </div>
+        <div class="sale-content__card"><img src="img/kid.png" alt="photo">
+            <p>HOT DEAL <br>
+                <span class="heading_pink "> FOR MEN</span>
+            </p>
+        </div>
+        <div class="sale-content__card"><img src="img/Rectangle 20.png" alt="photo">
+            <p>
+                NEW ARRIVALS <br><span class="heading_pink ">FOR KIDS</span>
+            <p>
+        </div>
+    </div>
+    <div class="catalog">
+        <div class="catalog__heading">Fetured Items</div>
+        <p>Shop for items based on what we featured in this week</p>
+        <div class="catalog__container">
+        </div>
+        <template id="news__template">
+            <div class="card">
+                <img class="card__img" src="" alt="">
+                <div class="card__tit"></div>
+                <div class="card__info"></div>
+                <div class="card__price"></div>
+                <button class="card_but">Add to cart</button>
+            </div>
+        </template>
+
+        <button class="catalog__button">Browse All Product</button>
+    </div>
+    <div class="info">
+        <div class="info__container center">
+            <div class="info__product">
+                <img src="./img/Forma 1 — копия.svg" alt="logo">
+                <h3>Free Delivery</h3>
+                <p>Worldwide delivery on all. Authorit tively morph <br>next-generation innov tion
+                    with
+                    extensive models.
+                </p>
+            </div>
+            <div class="info__product">
+                <img src="./img/Forma 1-2.svg" alt="logo">
+                <h3>Sales & discounts</h3>
+                <p>Worldwide delivery on all. Authorit tively morph <br>next-generation innov tion
+                    with
+                    extensive models.
+                </p>
+            </div>
+            <div class="info__product">
+                <img src="./img/Forma 1-3.svg" alt="logo">
+                <h3>Quality assurance</h3>
+                <p>Worldwide delivery on all. Authorit tively morph <br>next-generation innov tion
+                    with
+                    extensive models.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="cart-items"></div>
+    <div class="content-bottom">
+        <div class="content-bottom__left">
+            <img src="./img/Intersect.png" alt="photo">
+            <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span class="textDecor">a pulvinar purus
+                    condimentum“</span></p>
+        </div>
+        <div class="content-bottom__right">
+            <h2>SUBSCRIBE<br>
+                <span class="textDecorTit">FOR OUR NEWLETTER AND PROMOTION</span>
+            </h2>
+            <form action="email" class="email">
+                <button class="email__but" type="Email">Enter Your Email</button><br>
+                <button class="email__but__right" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer__foot center">
+        <div class="footer__foot__tit">
+            <h3 class="footer__foot__tit ">© 2017 Brand All Rights Reserved.</h3>
+        </div>
+        <div class="footer__foot__logo center ">
+            <a class="footer__foot__brand padding-right" href="#">
+                <svg class="footer__foot__svg" width="32px" height="32px" fill="#7a7a7a" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px"
+                    height="64px" viewBox="0 0 512 512" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g id="7935ec95c421cee6d86eb22ecd11b7e3">
+                            <path style="display: inline;"
+                                d="M283.122,122.174c0,5.24,0,22.319,0,46.583h83.424l-9.045,74.367h-74.379 c0,114.688,0,268.375,0,268.375h-98.726c0,0,0-151.653,0-268.375h-51.443v-74.367h51.443c0-29.492,0-50.463,0-56.302 c0-27.82-2.096-41.02,9.725-62.578C205.948,28.32,239.308-0.174,297.007,0.512c57.713,0.711,82.04,6.263,82.04,6.263 l-12.501,79.257c0,0-36.853-9.731-54.942-6.263C293.539,83.238,283.122,94.366,283.122,122.174z">
+                            </path>
+                        </g>
+                    </g>
+                </svg></a>
+            <a class="footer__foot__brand padding-right" href="#">
+                <svg class="footer__foot__svg" width="32px" height="32px" fill="#7a7a7a"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 31.812 26"
+                    stroke="#7a7a7a">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M20.877,2.000 C22.519,2.000 24.382,2.652 25.426,3.738 C26.724,3.486 27.949,3.025 29.050,2.386 C28.625,3.687 27.718,4.779 26.540,5.469 C27.693,5.332 28.797,5.035 29.820,4.590 C29.054,5.707 28.087,6.690 26.971,7.477 C26.981,7.715 26.987,7.955 26.987,8.195 C26.987,15.562 21.445,24.000 10.939,24.000 C7.715,24.000 4.507,23.133 1.982,21.551 C2.428,21.605 2.883,21.631 3.343,21.631 C6.019,21.631 8.482,20.740 10.439,19.242 C7.937,19.199 5.827,17.586 5.103,15.373 C5.450,15.437 5.810,15.473 6.178,15.473 C6.696,15.473 7.203,15.406 7.681,15.277 C5.068,14.768 3.100,12.514 3.100,9.813 C3.100,9.787 3.100,9.764 3.100,9.740 C3.871,10.158 4.750,10.410 5.687,10.440 C4.154,9.437 3.147,7.734 3.147,5.799 C3.147,4.777 3.428,3.818 3.919,2.998 C6.735,6.367 10.945,8.588 15.693,8.822 C15.594,8.414 15.543,7.984 15.543,7.553 C15.543,4.473 17.721,2.000 20.877,2.000 M29.820,4.590 L29.825,4.590 M20.877,-0.000 C17.033,-0.000 14.060,2.753 13.614,6.552 C10.425,5.905 7.524,4.204 5.440,1.711 C5.061,1.257 4.503,0.998 3.919,0.998 C3.867,0.998 3.815,1.000 3.763,1.004 C3.123,1.055 2.547,1.413 2.216,1.966 C1.525,3.122 1.159,4.447 1.159,5.799 C1.159,6.700 1.321,7.579 1.625,8.400 C1.300,8.762 1.113,9.238 1.113,9.740 L1.113,9.813 C1.113,11.772 1.882,13.589 3.160,14.952 C3.087,15.294 3.103,15.655 3.215,15.998 C3.657,17.348 4.459,18.510 5.499,19.396 C4.800,19.552 4.079,19.631 3.343,19.631 C2.954,19.631 2.577,19.609 2.222,19.565 C2.141,19.556 2.061,19.551 1.981,19.551 C1.148,19.551 0.391,20.078 0.108,20.886 C-0.202,21.770 0.140,22.753 0.932,23.249 C3.764,25.023 7.318,26.000 10.939,26.000 C17.778,26.000 22.025,22.843 24.383,20.195 C27.243,16.984 28.907,12.718 28.972,8.455 C29.899,7.682 30.717,6.790 31.410,5.792 C31.661,5.458 31.810,5.041 31.810,4.590 C31.810,3.909 31.473,3.308 30.958,2.946 C31.181,2.176 30.925,1.342 30.303,0.833 C29.940,0.537 29.496,0.386 29.049,0.386 C28.708,0.386 28.365,0.474 28.056,0.654 C27.391,1.040 26.680,1.344 25.931,1.562 C24.555,0.592 22.688,-0.000 20.877,-0.000 L20.877,-0.000 Z">
+                        </path>
+                    </g>
+                </svg></a>
+            <a class="footer__foot__brand padding-right" href="#">
+                <svg class="footer__foot__svg" fill="#7a7a7a" width="32px" viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M16.292 5C10.536 5 7.48 8.866 7.48 13.077c0 1.955 1.039 4.392 2.707 5.168.253.118.387.064.443-.18.047-.185.273-1.089.373-1.511a.402.402 0 0 0-.095-.386c-.55-.667-.988-1.896-.988-3.041 0-2.942 2.228-5.787 6.021-5.787 3.28 0 5.571 2.23 5.571 5.426 0 3.61-1.82 6.108-4.191 6.108-1.309 0-2.291-1.081-1.978-2.413.378-1.584 1.106-3.298 1.106-4.438 0-1.026-.552-1.883-1.685-1.883-1.341 0-2.415 1.385-2.415 3.241 0 1.182.4 1.978.4 1.978s-1.323 5.593-1.563 6.634c-.413 1.765.051 4.625.094 4.876.021.134.172.18.252.066.129-.175 1.725-2.565 2.174-4.292l.828-3.171c.439.829 1.707 1.531 3.061 1.531 4.021 0 6.923-3.703 6.923-8.299C24.52 8.301 20.92 5 16.292 5z">
+                        </path>
+                    </g>
+                </svg>
+            </a>
+            <a class="footer__foot__brand" href="#">
+                <svg class="footer__foot__svg" width="32px" height="32px" fill="#7a7a7a" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
+                    xml:space="preserve" stroke="#7a7a7a">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g id="7935ec95c421cee6d86eb22ecd120bc6">
+                            <path style="display: inline;"
+                                d="M245.271,24.703c4.217,2.607,8.945,6.438,14.209,11.453c5.053,5.24,10.018,11.677,14.871,19.312 c4.616,7.211,8.746,15.719,12.338,25.538c2.945,9.818,4.417,21.271,4.417,34.37c-0.399,24.003-5.701,43.216-15.906,57.612 c-5.003,6.986-10.292,13.424-15.894,19.325c-6.201,5.901-12.788,11.889-19.787,18.002c-4.017,4.142-7.723,8.833-11.104,14.085 c-4.017,5.452-6,11.789-6,18.976c0,6.998,2.046,12.774,6.15,17.354c3.48,4.379,6.887,8.184,10.155,11.465l22.768,18.651 c14.147,11.577,26.561,24.34,37.228,38.313c10.055,14.172,15.27,32.735,15.693,55.653c0,32.512-14.371,61.317-43.078,86.418 c-29.791,25.962-72.757,39.398-128.91,40.271c-47.008-0.449-82.102-10.467-105.281-30.066 c-23.404-18.302-35.106-40.196-35.106-65.671c0-12.426,3.805-26.262,11.428-41.507c7.373-15.258,20.759-28.656,40.109-40.184 c21.72-12.426,44.588-20.71,68.491-24.852c23.678-3.468,43.353-5.439,59.022-5.876c-4.841-6.35-9.157-13.161-12.938-20.41 c-4.416-7.023-6.637-15.457-6.637-25.338c0-5.938,0.848-10.866,2.532-14.821c1.472-4.166,2.857-8.009,4.104-11.502 c-7.623,0.873-14.821,1.31-21.57,1.31c-35.717-0.437-62.952-11.677-81.69-33.721c-19.599-20.51-29.405-44.4-29.405-71.685 c0-32.96,13.885-62.852,41.656-89.7c19.088-15.694,38.924-25.961,59.509-30.765C156.994,2.571,176.082,0.5,193.884,0.5h134.225 l-41.457,24.203H245.271z M271.184,411.034c0-17.029-5.553-31.875-16.668-44.525c-11.752-12.002-30.116-26.735-55.117-44.201 c-4.279-0.437-9.307-0.661-15.07-0.661c-3.418-0.449-12.164,0-26.286,1.322c-13.898,1.946-28.095,5.115-42.629,9.481 c-3.418,1.322-8.234,3.269-14.421,5.914c-6.201,2.819-12.5,6.861-18.913,12.101c-6.201,5.452-11.428,12.227-15.707,20.311 c-4.915,8.509-7.385,18.764-7.385,30.777c0,23.566,10.691,42.979,32.075,58.273c20.298,15.282,48.068,23.13,83.324,23.579 c31.625-0.449,55.778-7.423,72.446-20.959C263.086,449.122,271.184,431.993,271.184,411.034z M177.628,214.307 c17.653-0.661,32.387-6.999,44.151-19.025c5.676-8.533,9.319-17.279,10.954-26.261c0.985-8.958,1.484-16.493,1.484-22.618 c0-26.46-6.774-53.146-20.323-80.056c-6.35-12.9-14.684-23.392-25.063-31.476c-10.567-7.647-22.718-11.702-36.503-12.139 c-18.165,0.437-33.297,7.76-45.349,21.982C96.812,59.584,91.946,76.202,92.396,94.566c0,24.277,7.099,49.528,21.296,75.777 c6.886,12.251,15.769,22.63,26.635,31.164C151.193,210.04,163.644,214.307,177.628,214.307z M509.965,73.794h-70.436V3.369h-34.121 v70.425h-70.438v34.121h70.438v70.437h34.121v-70.437h70.436V73.794z">
+                            </path>
+                        </g>
+                    </g>
+                </svg></a>
+        </div>
+    </footer>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
