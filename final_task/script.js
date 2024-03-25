@@ -24,11 +24,12 @@ const cartItemsTit = document.createElement('h1');
 cartItemsTit.innerHTML = 'Cart Items';
 cartItemsTit.classList.add('catalog__heading');
 cartItems.appendChild(cartItemsTit);
+cartItemsTit.style.visibility = 'hidden';
+
 
 function createDiv() {
     const containerItems = document.createElement('div');
     containerItems.classList.add('container-items');
-
     const imgItems = document.createElement('img');
     const divInfoItems = document.createElement('div');
     const titItems = document.createElement('h2');
@@ -38,7 +39,7 @@ function createDiv() {
     const quantityItems = document.createElement('p');
     const svgClick = document.createElement('img');
 
-
+    cartItemsTit.style.visibility = 'visible';
     imgItems.src = "https://a.lmcdn.ru/img600x866/M/P/MP002XW0TO50_21820566_1_v1_2x.jpg";
     imgItems.width = '300';
     imgItems.height = '400';
@@ -58,7 +59,10 @@ function createDiv() {
 
 
     svgClick.addEventListener('click', function (event) {
-        cartItems.remove();
+        containerItems.remove();
+        if (cartItems.lastChild.remove()) {
+            cartItems.remove();
+        }
     })
 
     cartItems.appendChild(containerItems);
