@@ -72,18 +72,18 @@ ul li {
     line-height: normal;
 }
 
+.img__bot {
+    width: 500px;
+}
+
 .sales-content {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(1, 300px);
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(1, auto);
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     position: relative;
-
-    img {
-        filter: brightness(40%);
-    }
 
     p {
         position: absolute;
@@ -100,6 +100,14 @@ ul li {
     }
 }
 
+.sale-content__card {
+    &__img {
+        filter: brightness(40%);
+    }
+}
+
+
+
 .catalog__container {
     margin-top: 40px;
     display: grid;
@@ -112,6 +120,7 @@ ul li {
     border: 1px solid #ffffff;
     margin-bottom: 40px;
 }
+
 
 .card {
     padding: 10px;
