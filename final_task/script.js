@@ -16,6 +16,7 @@ const addToCart = document.querySelectorAll('button.card_but');
 addToCart.forEach(element => {
     element.addEventListener('click', function (e) {
         cartItems.classList.add('cart-items');
+        cartItems.scrollIntoView();
         createDiv();
     });
 });
@@ -60,9 +61,6 @@ function createDiv() {
 
     svgClick.addEventListener('click', function (event) {
         containerItems.remove();
-        if (cartItems.lastChild.remove()) {
-            cartItems.remove();
-        }
     })
 
     cartItems.appendChild(containerItems);
