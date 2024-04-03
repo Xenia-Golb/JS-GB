@@ -109,3 +109,4 @@ const dog = new ZooAnimal('Dog', 2, 'male');
 console.log(dog.getName()); // Вывод: Dog
 dog.setName('Dogg'); // Вывод: Cat
 console.log(dog.getName());
+dog.setAge(101);
