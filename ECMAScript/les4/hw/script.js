@@ -59,7 +59,9 @@ const dogsBox = document.createElement('div');
 dogsBox.setAttribute('class', 'dogs-box');
 body.appendChild(dogsBox);
 saveDogs.message.forEach(el => {
-    dogsBox.insertAdjacentHTML('beforeend', `<figure>
-    <img src="${el}">
-</figure>`)
+    setTimeout(function () {
+        dogsBox.insertAdjacentHTML('beforeend', `<figure>
+       <img src="${el}">
+   </figure>`)
+    }, 3000)
 });
