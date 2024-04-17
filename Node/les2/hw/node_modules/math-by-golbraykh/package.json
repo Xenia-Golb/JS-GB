@@ -1,0 +1,13 @@
+{
+  "name": "math-by-golbraykh",
+  "version": "1.0.0",
+  "description": "Math functions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "git repository": "https://github.com/XeniaGolbraykh/math-by-gol",
+  "keywords": [],
+  "author": "Xenia Golbraykh",
+  "license": "ISC"
+}
