@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.red_border {
+    text-align: center;
+    color: red;
+    border: red solid 1px;
+}
+
+.container {
+    margin-top: 200px;
+    padding-left: 150px;
+
+}
+
+.box-review {
+    margin-top: 100px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    min-width: 500px;
+    max-height: 500px;
+
+}
+
+.review-block {
+    width: 300px;
+    min-height: 30px;
+}
+
+
+.review {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    border: #cccc 1px solid;
+    min-width: 500px;
+    max-height: 500px;
+}
