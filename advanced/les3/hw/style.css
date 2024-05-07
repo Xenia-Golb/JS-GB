@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 200px;
+    padding-left: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.product {
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.rewPage {
+    padding-top: 100px;
+    padding-left: 200px;
+}
+
+.box-rew {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: red;
+    width: 700px;
+    height: 150px;
+}
+
+.allRewPage {
+    padding-left: 200px;
+    display: flex;
+    gap: 30px;
+}
