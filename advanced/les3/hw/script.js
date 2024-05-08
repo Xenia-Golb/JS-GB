@@ -5,13 +5,14 @@ const rewPage = document.querySelector('.rewPage');
 const allRewPage = document.querySelector('.allRewPage');
 
 
-const allRew = [];
-const getParse = JSON.parse(localStorage.getItem('rewiews', allRew));
+
+const rewiews = JSON.parse(localStorage.getItem('rewiews')) || [];
 
 parseData.forEach(element => {
     const product = document.createElement('div');
     const imgEl = document.createElement('img');
     const h1El = document.createElement('h1');
+
     const pEl = document.createElement('p');
     const priceEl = document.createElement('p');
     const reviewBlock = document.createElement('div');
@@ -26,6 +27,22 @@ parseData.forEach(element => {
         addAllRew();
 
     });
+    h1El.addEventListener('click', () => {
+        switch (h1El.textContent.toLocaleLowerCase()) {
+            case 'eggs':
+                console.log('eggs');
+                break;
+            case 'avokado':
+                console.log('Avokado');
+                break;
+            case 'coconut milk':
+                console.log('coco');
+                break;
+            default:
+                throw new Error('Введите корректное название продукта!');
+
+        }
+    })
 
     reviewBlock.appendChild(reviewBtn);
     reviewBlock.appendChild(allRewiewsEl);
@@ -64,9 +81,12 @@ const addReviewPage = () => {
         switch (inputName.value.toLowerCase()) {
             case 'eggs':
                 console.log('eggs');
+                console.log(inputRew.textContent);
+                productRew();
                 break;
             case 'avokado':
                 console.log('Avokado');
+                productRew();
                 break;
             case 'coconut milk':
                 console.log('coco');
@@ -76,7 +96,7 @@ const addReviewPage = () => {
 
         }
         allRew.push({ "inputName": inputName.value, "inputRew": inputRew.value });
-        localStorage.setItem('rewiews', JSON.stringify(allRew));
+        localStorage.setItem('rewiews', JSON.stringify(rewiews));
     })
 
     rewPage.appendChild(boxRew);
@@ -89,15 +109,46 @@ const addReviewPage = () => {
 }
 
 const addAllRew = () => {
-    JSON.stringify(getParse.forEach(rew => {
+    JSON.stringify(rewiews.forEach(rew => {
         const rewEl = document.createElement('div');
         rewEl.classList.add('rew');
         const titleEl = document.createElement('p');
-        titleEl.textContent = rew.inputName;
+        titleEl.textContent = rew.inputName + ':';
         const textEl = document.createElement('p');
         textEl.textContent = rew.inputRew;
         allRewPage.appendChild(rewEl);
         rewEl.appendChild(titleEl);
         rewEl.appendChild(textEl);
     }));
+}
+// const productRew = () => {
+//     JSON.stringify(getParse.forEach(
+//         (rew.inputName === h1El.textContent) ? () => {
+//             const rewEl = document.createElement('div');
+//             rewEl.classList.add('rew');
+//             const titleEl = document.createElement('p');
+//             titleEl.textContent = rew.inputName + ':';
+//             const textEl = document.createElement('p');
+//             textEl.textContent = rew.inputRew;
+//             allRewPage.appendChild(rewEl);
+//             rewEl.appendChild(titleEl);
+//             rewEl.appendChild(textEl);
+//         }
+//             : console.log('false')
+//     ));
+// }
+function productRew(h1El) {
+    if (h1El.textContent === JSON.stringify(getParse(inputRew.inputName))) {
+        const rewEl = document.createElement('div');
+        rewEl.classList.add('rew');
+        const titleEl = document.createElement('p');
+        titleEl.textContent = rew.inputName + ':';
+        const textEl = document.createElement('p');
+        textEl.textContent = rew.inputRew;
+        product.appendChild(rewEl);
+        rewEl.appendChild(titleEl);
+        rewEl.appendChild(textEl);
+    } else {
+        console.log('false');
+    }
 }

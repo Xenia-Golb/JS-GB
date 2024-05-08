@@ -42,7 +42,7 @@ img {
     gap: 20px;
     padding: 20px;
     text-align: center;
-    background-color: red;
+    background-color: #cccc;
     width: 700px;
     height: 150px;
 }
@@ -51,4 +51,19 @@ img {
     padding-left: 200px;
     display: flex;
     gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.rew {
+    display: flex;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 20px;
+    width: 700px;
+    height: 100px;
 }
