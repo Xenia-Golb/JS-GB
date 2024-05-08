@@ -3,9 +3,6 @@ console.log(parseData);
 const container = document.querySelector('.container');
 const rewPage = document.querySelector('.rewPage');
 const allRewPage = document.querySelector('.allRewPage');
-
-
-
 const rewiews = JSON.parse(localStorage.getItem('rewiews')) || [];
 
 parseData.forEach(element => {
@@ -16,36 +13,46 @@ parseData.forEach(element => {
     const pEl = document.createElement('p');
     const priceEl = document.createElement('p');
     const reviewBlock = document.createElement('div');
-    const allRewiewsEl = document.createElement('button');
-    allRewiewsEl.innerHTML = 'Все отзывы';
     const reviewBtn = document.createElement('button');
     reviewBtn.innerHTML = 'Добавить отзыв';
     reviewBtn.addEventListener('click', () => {
         addReviewPage();
     });
-    allRewiewsEl.addEventListener('click', () => {
-        addAllRew();
 
-    });
-    h1El.addEventListener('click', () => {
-        switch (h1El.textContent.toLocaleLowerCase()) {
-            case 'eggs':
-                console.log('eggs');
-                break;
-            case 'avokado':
-                console.log('Avokado');
-                break;
-            case 'coconut milk':
-                console.log('coco');
-                break;
-            default:
-                throw new Error('Введите корректное название продукта!');
-
+    h1El.addEventListener('click', (e) => {
+        for (const rewiew of rewiews) {
+            const addBlock = () => {
+                const rewEl = document.createElement('div');
+                rewEl.classList.add('rew');
+                const titleEl = document.createElement('p');
+                titleEl.textContent = rewiew.inputName + ':';
+                const textEl = document.createElement('p');
+                textEl.textContent = rewiew.inputRew;
+                allRewPage.appendChild(rewEl);
+                rewEl.appendChild(titleEl);
+                rewEl.appendChild(textEl);
+                rewEl.addEventListener('click', (e) => {
+                    rewEl.remove(e.target)
+                    rewiews.pop(e.target);
+                    localStorage.setItem('rewiews', JSON.stringify(rewiews))
+                })
+            }
+            if (e.target.textContent.toLowerCase() === 'eggs') {
+                if (rewiew.inputName === 'eggs') {
+                    addBlock();
+                }
+            } if (e.target.textContent.toLowerCase() === 'avokado') {
+                if (rewiew.inputName === 'avokado') {
+                    addBlock();
+                }
+            } if (e.target.textContent.toLowerCase() === 'coconut milk') {
+                if (rewiew.inputName === 'coconut milk') {
+                    addBlock();
+                }
+            }
         }
-    })
-
+    });
     reviewBlock.appendChild(reviewBtn);
-    reviewBlock.appendChild(allRewiewsEl);
 
     imgEl.src = element.url;
     h1El.textContent = element.title;
@@ -61,7 +68,10 @@ parseData.forEach(element => {
     product.appendChild(priceEl);
     product.appendChild(reviewBlock);
 });
+const allRewiewsEl = document.querySelector('.all-rewiews').addEventListener('click', () => {
+    addAllRew();
 
+});
 
 const addReviewPage = () => {
     const boxRew = document.createElement('div');
@@ -78,25 +88,14 @@ const addReviewPage = () => {
     const btnRew = document.createElement('button');
     btnRew.innerHTML = 'Отправить';
     btnRew.addEventListener('click', () => {
-        switch (inputName.value.toLowerCase()) {
-            case 'eggs':
-                console.log('eggs');
-                console.log(inputRew.textContent);
-                productRew();
-                break;
-            case 'avokado':
-                console.log('Avokado');
-                productRew();
-                break;
-            case 'coconut milk':
-                console.log('coco');
-                break;
-            default:
-                throw new Error('Введите корректное название продукта!');
-
+        if (inputName.value.toLocaleLowerCase() === 'eggs' || inputName.value.toLocaleLowerCase() === 'avokado' || inputName.value.toLocaleLowerCase() === 'coconut milk') {
+            rewiews.push({ "inputName": inputName.value, "inputRew": inputRew.value });
+            localStorage.setItem('rewiews', JSON.stringify(rewiews))
+            alert("Ваш отзыв улетел!")
         }
-        allRew.push({ "inputName": inputName.value, "inputRew": inputRew.value });
-        localStorage.setItem('rewiews', JSON.stringify(rewiews));
+        else {
+            alert('Вы ввели неправильное название товара')
+        }
     })
 
     rewPage.appendChild(boxRew);
@@ -109,46 +108,21 @@ const addReviewPage = () => {
 }
 
 const addAllRew = () => {
-    JSON.stringify(rewiews.forEach(rew => {
+    JSON.stringify(rewiews.forEach(rewiew => {
         const rewEl = document.createElement('div');
         rewEl.classList.add('rew');
         const titleEl = document.createElement('p');
-        titleEl.textContent = rew.inputName + ':';
+        titleEl.textContent = rewiew.inputName + ':';
         const textEl = document.createElement('p');
-        textEl.textContent = rew.inputRew;
+        textEl.textContent = rewiew.inputRew;
         allRewPage.appendChild(rewEl);
         rewEl.appendChild(titleEl);
         rewEl.appendChild(textEl);
+        rewEl.addEventListener('click', (e) => {
+            rewEl.remove(e.target)
+            rewiews.pop(e.target);
+            localStorage.setItem('rewiews', JSON.stringify(rewiews))
+        })
     }));
 }
-// const productRew = () => {
-//     JSON.stringify(getParse.forEach(
-//         (rew.inputName === h1El.textContent) ? () => {
-//             const rewEl = document.createElement('div');
-//             rewEl.classList.add('rew');
-//             const titleEl = document.createElement('p');
-//             titleEl.textContent = rew.inputName + ':';
-//             const textEl = document.createElement('p');
-//             textEl.textContent = rew.inputRew;
-//             allRewPage.appendChild(rewEl);
-//             rewEl.appendChild(titleEl);
-//             rewEl.appendChild(textEl);
-//         }
-//             : console.log('false')
-//     ));
-// }
-function productRew(h1El) {
-    if (h1El.textContent === JSON.stringify(getParse(inputRew.inputName))) {
-        const rewEl = document.createElement('div');
-        rewEl.classList.add('rew');
-        const titleEl = document.createElement('p');
-        titleEl.textContent = rew.inputName + ':';
-        const textEl = document.createElement('p');
-        textEl.textContent = rew.inputRew;
-        product.appendChild(rewEl);
-        rewEl.appendChild(titleEl);
-        rewEl.appendChild(textEl);
-    } else {
-        console.log('false');
-    }
-}
+
