@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            background-color: pink;
+            margin-bottom: 20px;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .menu {
+            display: flex;
+            padding: 10px;
+            gap: 30px;
+            list-style: none;
+
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a.active {
+            color: pink;
+        }
+
+        .modal {
+            display: none;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+
+        .modal.actives {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a class="menu-link active" href="#">Home</a></li>
+            <li><a class="menu-link" href="#">About</a></li>
+            <li><a class="menu-link" href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <button class="btn open" type="button">OPEN</button>
+    <div class="modal">
+        <h1>Hello</h1>
+        <button class="btn close" type="button">CLOSE</button>
+    </div>
+    <div class="box">
+        <button class="btn buy" type="button">Купить</button>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
