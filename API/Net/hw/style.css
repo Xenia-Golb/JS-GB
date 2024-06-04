@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #faecec;
+}
+
+.tit {
+    color: rgb(106, 102, 96);
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.photo-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.photo:hover {
+    transform: scale(1.1);
+    transition: 0.9s;
+}
+
+.user {
+    color: rgb(106, 102, 96);
+    font-size: 20px;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+/* button {
+    width: 140px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: pink;
+    color: rgb(106, 102, 96);
+} */
+.likes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: #faecec;
+    transition: 2ms;
+}
